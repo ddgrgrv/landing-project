@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Дмитрий Алексеев</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="preload" as="font"  href="fonts/roboto-v20-latin_cyrillic-regular.woff2" crossorigin>
+	<link rel="preload" as="font"  href="fonts/roboto-v20-latin_cyrillic-500.woff2" crossorigin>
+	<link rel="preload" as="font"  href="fonts/roboto-v20-latin_cyrillic-700.woff2" crossorigin>
+	<link rel="preload" as="font"  href="fonts/roboto-v20-latin_cyrillic-900.woff2" crossorigin>
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="stylesheet" href="libs/slider/slider.min.css">
+	<link rel="stylesheet" href="css/fontawesome.css">
+	<link type='text/css' href='libs/modal/basic.css' rel='stylesheet' media='screen'>
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<script  src='libs/jquery/jquery.js'></script>
+	<script src="libs/modal/basic.js"></script>
+	<script defer src="libs/slider/slider.min.js"></script>
+	<script defer src="libs/mask/jquery.inputmask.js"></script>
+	<script src="script.js"></script>
+</head>
+<body id="body">
+	<header>
+		<div class="fixed-container">
+			<div class="header">
+				<div class="header__wrapper-mob">
+					<nav class="header__nav">
+						<ul class="header__list">
+							<li class="header__item"><a href="#skills" class="header__link">Услуги</a></li>
+							<li class="header__item"><a href="#example" class="header__link">Портфолио</a></li>
+							<li class="header__item"><a href="#price" class="header__link">Стоимость</a></li>
+						</ul>
+					</nav>
+				</div>
+				<button class="header__menu-mob" aria-label= 'Меню'></button>
+				<div class="header__wrapper">
+					<a href="tel:+74999955577" class="header__tel">+7 (499) 995-55-77</a>
+					<button class="callback modal header__callback" aria-label="Заказать звонок">Заказать звонок</button>
+					<button class="header__button-mob modal"  aria-label="Заказать звонок"></button>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<section class="about-background">
+			<span class="about-background__component__1">{ }</span>
+			<span class="about-background__component__2">&lt;/&gt;</span>
+			<span class="about-background__component__3">#</span>
+			<span class="about-background__component__4">&lt;div&gt;</span>
+			<span class="about-background__component__5">&lt;div&gt;</span>
+			<div class="fixed-container__about order">
+				<img src="img/photo.webp" alt="Дмитрий Алексеев" class="about__img">
+				<div class="about" id="about">
+					<h2 class="about__title">Дмитрий Алексеев</h2>
+					<p class="about__text">Frontend-разработчик и веб-верстальщик</p>
+					<div class="about__wrapper">
+						<button class="about__button request modal" aria-label="Узнать больше">Узнать больше</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="skills-background">
+			<div class="fixed-container">
+				<div class="skills" id="skills">
+					<h2 class="skills__title">Что я делаю</h2>
+					<ul class="skills__list">
+						<li class="skills__item__tools"><span class="skills__span">Вёрстка&nbsp;лендинг–страниц и&nbsp;сайтов любой сложности</span></li>
+						<li class="skills__item__responsive"><span class="skills__span">Адаптивная вёрстка под&nbsp;все браузеры&nbsp;и устройства</span></li>
+						<li class="skills__item__programming"><span class="skills__span">Frontend–разработка и&nbsp;программирование</span></li>
+						<li class="skills__item__coding"><span class="skills__span">Исправление&nbsp;и&nbsp;доработка существующей&nbsp;вёрстки</span></li>
+					</ul>
+					<div class="skills__wrapper">
+						<button class="skills__button request modal" aria-label="Узнать стоимость">Узнать стоимость</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="fixed-container__example">
+			<section class="example" id="example">
+				<h2 class="example__title">Примеры моих работ</h2>
+				  <div class="swiper-container">
+				    <div class="swiper-wrapper">
+				      <div class="swiper-slide position-slide">
+				      	<img src="img/slides_1.jpg" alt="Сайт психолога Веры Антоновой" class="swiper-slide__img">
+				      	<span class="swiper-slide__span">Сайт психолога Веры Антоновой</span>
+				      </div>
+				      <div class="swiper-slide position-slide">
+				      	<img src="img/slides_2.jpg" alt="Сайт магазина детской одежды" class="swiper-slide__img">
+				      	<span class="swiper-slide__span">Сайт магазина детской одежды</span>
+				      </div>
+				      <div class="swiper-slide position-slide">
+				      	<img src="img/slides_3.jpg" alt="Сайт магазина «Рыболов»" class="swiper-slide__img">
+				      	<span class="swiper-slide__span">Сайт магазина «Рыболов»</span>
+				      </div>
+				    </div> 
+				    <div class="swiper-pagination"></div>
+				  </div>
+				  <button class=" example__button__next" aria-label="Следующая картинка"></button>
+				  <button class=" example__button__prev" aria-label="Предыдущая картинка"></button>
+				<button class="example__button request modal" aria-label="Заказать проект">Заказать проект</button>
+			</section>
+		</div>
+		<section class="price-background">
+			<span class="price-background__component__1">{ }</span>
+			<span class="price-background__component__2">&lt;/&gt;</span>
+			<span class="price-background__component__3">#</span>
+			<span class="price-background__component__4">&lt;div&gt;</span>
+			<span class="price-background__component__5">{ }</span>
+			<div class="fixed-container__price">
+				<div class="price" id="price">
+					<h2 class="price__title">Адаптивная вёрстка под все&nbsp;устройства и&nbsp;браузеры&nbsp;от&nbsp;1000 рублей всего за 4 часа.*</h2>
+				    <p class="price__paragraph">* Срок&nbsp;и&nbsp;стоимость&nbsp;могут&nbsp;отличаться от&nbsp;заявленных&nbsp;и рассчитываются индивидуально,в&nbsp;зависимости от&nbsp;сложности&nbsp;задач.</p>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="fixed-container footer">
+			<nav class="footer__nav">
+				<ul class="footer__left-list">
+					<li class="footer__left-item"><a href="#skills" class="footer__left-link">Услуги</a></li>
+					<li class="footer__left-item"><a href="#example" class="footer__left-link">Портфолио</a></li>
+					<li class="footer__left-item"><a href="#price" class="footer__left-link">Стоимость</a></li>
+			    </ul>
+			</nav>
+			<ul class="footer__center-list">
+				<li class="footer__center-item"><i class="fa fa-phone"></i><a href="tel:+74999955577" class="footer__center-link">+7 (499) 995-77-55</a></li>
+				<li class="footer__center-item"><i class="fa fa-envelope"></i><a href="mailto:dmitry@alekseev.com" class="footer__center-link">dmitry@alekseev.com</a></li>
+			</ul>
+			<div class="footer__right-list">
+				<button class="footer__callback modal callback">Заказать звонок</button>
+				<ul class="footer__list-social">
+					<li class="footer__right-item"><a href="https://vk.com" target="_blank" class="footer__social vk" aria-label="Ссылка на сайт vk.com"></a></li>
+					<li class="footer__right-item"><a href="https://www.facebook.com" target="_blank" class="footer__social fb" aria-label="Ссылка на сайт facebook.com"></a></li>
+					<li class="footer__right-item"><a href="https://twitter.com" target="_blank" class="footer__social tw" aria-label="Ссылка на сайт twitter.com"></a></li>
+					<li class="footer__right-item"><a href="https://www.instagram.com" target="_blank" class="footer__social inst" aria-label="Ссылка на сайт instagram.com"></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="copyright">
+			<p class="copyright__text">© Дмитрий Алексеев, 2016 – 2018</p>
+		</div>
+	</footer>
+	<div class="basic-modal-content">
+		<form class="modal-form" id="myform">
+			<span class="modal-form__span__close">
+				<button class=" modal-form__close modalCloseImg simplemodal-close">	&#10006;</button>
+			</span>
+			<h2 class="modal-form__title">Форма обратной связи</h2>
+			<span class="modal-form__span">
+			    <input type="text" name="first_name" id="first_name" class="modal-form__input" placeholder="Имя" required>
+
+			    <input type="text" name="last_name" id="last_name" class="modal-form__input" placeholder="Фамилия" required>
+			</span>
+
+		    <span class="modal-form__span">
+
+			    <input type="email" name="email" id="email" class="modal-form__input" placeholder="Email" required>
+
+			    <input type="tel" name="phone" id="phone" class="modal-form__input" placeholder="Телефон" required>
+		    </span>
+
+		  	<span class="modal-form__span">
+			  	<input type="text" name="text" id="text" class="modal-form__input__text" placeholder="Текст">
+		  	</span>
+		  	<span class="modal-form__span__wrapper">
+			    <input class="request modalCloseImg " type="submit" value="Отправить">
+			</span>
+		</form>
+	</div>
+	<div class="simplemodal-overlay" id="simplemodal-overlay"></div>
+</body>
+</html>

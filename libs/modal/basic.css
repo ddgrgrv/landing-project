@@ -1,0 +1,188 @@
+/*
+ * SimpleModal Basic Modal Dialog
+ * http://simplemodal.com
+ *
+ * Copyright (c) 2013 Eric Martin - http://ericmmartin.com
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ */
+ @import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+/* roboto-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/roboto-v20-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
+  src: local('Roboto'), local('Roboto-Regular'),
+       url('fonts/roboto-v20-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/roboto-v20-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/roboto-v20-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/roboto-v20-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/roboto-v20-latin_cyrillic-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+*{
+	font-family: Roboto;
+}
+
+.basic-modal-content {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 600px;
+	max-width: 100%;
+	height: 500px;
+	max-height: 100%;
+	z-index: 1010;
+	background: #fff;
+}
+.basic-modal-content.closed{
+	display: none;
+}
+
+/* Overlay */
+.simplemodal-overlay {
+	display: none;
+	background-color:#000;
+	opacity: 0.4;
+	overflow: hidden;
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Container */
+.simplemodal-container {
+	background-color:#ffff; 
+	padding:50px;
+}
+.modal-form{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+	overflow: auto;
+}
+.modal-form__title{
+	font-family: Roboto;
+	font-size: 40px;
+	line-height: 54px;
+	font-weight: 900;
+	color: #1f1f24;
+	text-align: center;
+	margin-top: 20px;
+}
+.modal-form__span{
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 20px;
+}
+.modal-form__label{
+	font-family: Roboto;
+	font-size: 20px;
+	line-height: 54px;
+	font-weight: 700;
+	color: #1f1f24;
+	margin-right: 30px;
+}
+.modal-form__input{
+	width: 50%;
+	line-height: 54px;
+	font-size: 16px;
+	border: 2px solid #eee;
+	background-color: #eee;
+}
+.modal-form__input:focus{
+	border: 2px solid #1f1f248a;
+}
+.modal-form__input:nth-child(2n-1){
+	margin-right: 20px;
+}
+.modal-form__input__text{
+	width: 100%;
+	line-height: 54px;
+	font-size: 16px;
+	border: 2px solid #eee;
+	background-color: #eee;
+}
+.modal-form__input__text:focus{
+	border: 2px solid #1f1f248a;
+}
+.modal-form__request:focus{
+	border: 2px solid #1f1f248a;
+}
+.modal-form__request{
+  width: 270px;
+  height: 60px;
+  background-color: #ff4e2e;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: inline;
+  text-align: center;
+  justify-content: center;
+}
+.modal-form__span__wrapper{
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+}
+.modal-form__span__close{
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+.modal-form__close {
+	color: #1f1f24;
+	opacity: 0.5;
+	font-size: 32px;
+	transition: opacity 0.05s ease 0.05s;
+	border: 2px solid transparent;
+	background-color: transparent;
+}
+.modal-form__close:hover {
+	opacity: 1;
+}
+:focus::-webkit-input-placeholder {color: transparent}
+:focus::-moz-placeholder          {color: transparent}
+:focus:-moz-placeholder           {color: transparent}
+:focus:-ms-input-placeholder      {color: transparent}
+
+@media(max-width: 680px){
+	.modal-form__title{
+		font-size: 20px;
+		margin: 0;
+	}
+	.modal-form__input{
+		width: 100%;
+		line-height: 36px;
+		margin-bottom: 20px;
+	}
+	.modal-form__span{
+		flex-direction: column;
+		margin: 0;
+	}
+	.modal-form__input:nth-child(2n-1){
+		margin-right: 0;
+	}
+	.modal-form__close{
+		font-size: 24px;
+	}
+}
+@media(max-width: 768px){
+	.basic-modal-content{
+		width: 90%;
+		height: 90%;
+		padding: 0 20px 20px 20px;
+	}
+}
